@@ -20,6 +20,11 @@ public class StackOperation<K> {
     public void printStack() {
         myList.printMyNode();
     }
+    
+    //Ability to peak and pop from the stack
+    public INode<K> pop() {
+        return myList.head;
+    }
 }
 
 
