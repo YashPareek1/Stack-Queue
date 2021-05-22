@@ -39,4 +39,15 @@ public class MyLinkedList<K extends Comparable<K>> {
         this.head = head.getNext();
         return tempNode;
     }
+    
+    //Enqueue Internally Calling append method on linkedlist
+    public void append(INode<K> MyNode) {
+        if(this.tail == null && this.head == null) {
+            this.tail = MyNode;
+            this.head = MyNode;
+        } else {
+            this.tail.setNext(MyNode);
+            this.tail = MyNode;
+        }
+    }
 }
